@@ -1,8 +1,81 @@
 body {
+<<<<<<< HEAD
     background: lightblue;
+=======
+    margin: 0;
+    background-color: azure;
+>>>>>>> 701562c (git --amend -m "Perparim")
 }
 
 .red {
     color: red;
 }
 
+<<<<<<< HEAD
+=======
+.outset {
+border-style: outset;
+}
+
+.round3 {
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.header{
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+.column.side{
+    width: 23%;
+}
+.column.middle{
+    width: 50%;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #f1f1f1;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+>>>>>>> 701562c (git --amend -m "Perparim")
