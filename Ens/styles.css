@@ -1,18 +1,12 @@
 body {
-<<<<<<< HEAD
-    background: lightblue;
-=======
     margin: 0;
     background-color: azure;
->>>>>>> 701562c (git --amend -m "Perparim")
 }
 
 .red {
     color: red;
 }
 
-<<<<<<< HEAD
-=======
 .outset {
 border-style: outset;
 }
@@ -78,4 +72,3 @@ footer {
       width: 100%;
       padding: 0;
     }
->>>>>>> 701562c (git --amend -m "Perparim")
