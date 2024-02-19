@@ -1,8 +1,15 @@
 body {
-    background: lightblue;
+    background: black;
 }
 
 .red {
     color: red;
 }
 
+.h1 {
+    color: white;
+}
+
+.div {
+    color: white;
+}
