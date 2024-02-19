@@ -14,3 +14,9 @@ body {
     font-size: 12px;
     color: green;
 }
+
+.dotted-border {
+    border: 2px dotted
+    width: 100px;
+    height: 100px;
+}
