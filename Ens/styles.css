@@ -10,13 +10,22 @@ body {
     color: white;
 }
 
-.p {
+p {
     font-size: 12px;
     color: green;
 }
 
 .dotted-border {
-    border: 2px dotted
-    width: 100px;
-    height: 100px;
+    border: 2px dotted;
+    width: 300px;
+    height: 150px;
+}
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+ul {
+list-style: square;
+
 }
