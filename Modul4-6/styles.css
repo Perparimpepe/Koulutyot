@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: whitesmoke;
 }
 
 .h1 {
@@ -16,7 +16,7 @@ p {
 }
 
 header{
-    background-color: white;
+    background-color: grey;
     text-align: center;
     padding: 20px;
 }
@@ -24,7 +24,7 @@ nav {
     float: left;
     padding: none;
     width: 100%;
-    background-color: burlywood;
+    background-color: black;
 }
 ul {
     list-style-type: none;
@@ -34,13 +34,13 @@ li {
 }
 li a {
     display: block;
-    color: black;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 li a:hover{
-    color: whitesmoke;
+    color: grey;
 }
 section {
     float: left;
