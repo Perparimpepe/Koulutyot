@@ -14,3 +14,16 @@ p {
     border-radius: 20px;
     padding: 1em;
 }
+
+header{
+    background-color: white;
+    text-align: center;
+}
+nav {
+    float: left;
+    padding: 20px;
+}
+section {
+    width: 25%;
+    margin-left: 25%;
+}
