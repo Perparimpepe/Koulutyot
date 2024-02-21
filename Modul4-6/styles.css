@@ -18,18 +18,29 @@ p {
 header{
     background-color: white;
     text-align: center;
+    padding: 20px;
 }
 nav {
     float: left;
-    padding: 20px;
+    padding: none;
     width: 100%;
-    border: solid;
-    border-color:burlywood ;
-    padding: 1em;
+    background-color: burlywood;
 }
-ol {
+ul {
+    list-style-type: none;
+}
+li {
     float: left;
-    display: inline;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    color: whitesmoke;
 }
 section {
     float: left;
