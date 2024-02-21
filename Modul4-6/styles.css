@@ -22,8 +22,33 @@ header{
 nav {
     float: left;
     padding: 20px;
+    width: 100%;
+    border: solid;
+    border-color:burlywood ;
+    padding: 1em;
+}
+ol {
+    float: left;
+    display: inline;
 }
 section {
+    float: left;
+    width: 65%;
+    height: 25%;
+}
+aside {
+    float: right;
     width: 25%;
-    margin-left: 25%;
+    height: 65%;
+}
+article {
+    float: left;
+    width: 65%;
+    height: 25%;
+
+}
+footer {
+    float: left;
+    height: 20px;
+    width: 100%;
 }
