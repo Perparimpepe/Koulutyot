@@ -54,7 +54,7 @@ background-color: rgb(143, 141, 141);
 height:600px
 }
 .column{
-float: center;
+float: left;
 width: 65%;
 }
 aside {
