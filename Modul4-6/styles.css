@@ -21,37 +21,34 @@ header{
     padding: 25px;
 }
 nav {
+text-align: left;
+background-color: rgb(171, 174, 174);
+width: 100%;
+height: 30px;
+padding: 10px 30px;
+font-size: large;
 }
 ul {
-    list-style-type: none;
-    background-color: #333;
-    float: right;
-    width: 100%;
-    overflow: hidden;
-    padding: none;
-    margin: none;
+list-style: none;
+color: black;
 }
 
 li {
-    float: left;
-}
-li a {
-    display: block;
+    display: inline-block;
+    padding: 1px 10em;
     color: whitesmoke;
     text-align: center;
-    padding: 14px 16px;
+}
+li a {
+    color: whitesmoke;
     text-decoration: none;
 }
 li a:hover{
     color: rgb(245, 7, 7);
 }
 ol {
-    list-style-type: none;
-    text-align: left;
-    background-color: rgb(195, 195, 197);
-    height: 100%;
-    float: left;
-    font-size: x-large;
+    list-style: none;
+    color: grey;
 }
 section {
     float: left;
@@ -61,10 +58,10 @@ section {
 .column-left {
     float: left;
     color: whitesmoke;
-    padding-left: none;
+    padding-left: 10px;
     width: 15%;
     background-color: rgb(143, 141, 141);
-    height: 70vh
+    height:20em;
 }
 .column{
     float: left;
