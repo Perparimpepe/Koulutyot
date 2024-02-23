@@ -40,12 +40,22 @@ li a {
     text-decoration: none;
 }
 li a:hover{
-    color: grey;
+    color: rgb(245, 7, 7);
 }
 section {
     float: left;
     width: 65%;
     height: 25%;
+}
+.column-left {
+float: left;
+width: 15%;
+background-color: rgb(143, 141, 141);
+height:600px
+}
+.column{
+float: center;
+width: 65%;
 }
 aside {
     float: right;
@@ -60,6 +70,8 @@ article {
 }
 footer {
     float: left;
-    height: 20px;
+    height: 100px;
     width: 100%;
+    background-color: #7f7c7c;
+    text-align: center;
 }
