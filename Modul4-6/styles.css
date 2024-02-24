@@ -54,13 +54,6 @@ ol {
     list-style: none;
     color: grey;
 }
-section {
-    width: 65%;
-    height: 25%;
-    margin: none;
-    padding: 10px;
-}
-
 .column {
     display: flex;
     color: whitesmoke;
@@ -69,6 +62,14 @@ section {
     background-color: rgb(143, 141, 141);
     height: 60em;
     margin: 0%;
+}
+section {
+    float: left;
+    width: 65%;
+    height: 25%;
+    margin: none;
+    padding: 10px;
+    text-align: center;
 }
 
 aside {
