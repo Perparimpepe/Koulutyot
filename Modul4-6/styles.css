@@ -55,7 +55,7 @@ ol {
 }
 
 section {
-    float: flex;
+    float: left;
     width: 65%;
     height: 25%;
     margin: 0%;
