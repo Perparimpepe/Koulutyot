@@ -53,23 +53,23 @@ ol {
     list-style: none;
     color: grey;
 }
-.column {
-    display: flex;
-    color: whitesmoke;
-    width: 12%;
-    background-color: rgb(143, 141, 141);
-    height: 60em;
-    margin: 0%;
-}
+
 section {
-    float: left;
+    float: flex;
     width: 65%;
     height: 25%;
     margin: 0%;
     padding: 10px;
     text-align: left;
 }
-
+.column {
+    float: left;
+    color: whitesmoke;
+    width: 12%;
+    background-color: rgb(143, 141, 141);
+    height: 60em;
+    margin: 0%;
+}
 aside {
     float: right;
     width: 25%;
