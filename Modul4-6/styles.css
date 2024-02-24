@@ -37,7 +37,6 @@ ul {
 li {
     display: inline-flex;
     padding: 1px 1em;
-    text-align: none;
 }
 
 li a {
@@ -57,7 +56,6 @@ ol {
 .column {
     display: flex;
     color: whitesmoke;
-    padding-left: none;
     width: 12%;
     background-color: rgb(143, 141, 141);
     height: 60em;
@@ -67,9 +65,9 @@ section {
     float: left;
     width: 65%;
     height: 25%;
-    margin: none;
+    margin: 0%;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 aside {
