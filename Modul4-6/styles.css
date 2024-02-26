@@ -7,13 +7,9 @@ body {
     min-height: 100vh;
 }
 
-h1 {
-    
-}
+h1 {}
 
-p {
- 
-}
+p {}
 
 header {
     background-color: grey;
@@ -28,6 +24,7 @@ nav {
     height: auto;
     padding: 10px 30px;
 }
+
 .nav-links {
     color: whitesmoke;
     text-decoration: none;
@@ -35,11 +32,12 @@ nav {
 }
 
 
-li a{
+li a {
     color: whitesmoke;
     text-decoration: none;
     font-size: xx-large;
 }
+
 li {
     display: inline-flex;
     padding: 1px 1em;
@@ -50,15 +48,20 @@ li a:hover {
     color: rgb(245, 7, 7);
 }
 
+.row {
+    display: table;
+}
+
 section {
-    float: right;
-    width: 85%;
+    float: left;
+    width: 70%;
     height: 25%;
     margin: 0%;
-    padding: 1em;
-    text-align: center;
-    background-color: blue;
+    padding-left: 30px;
+    text-align: left;
+
 }
+
 .column {
     float: left;
     color: whitesmoke;
@@ -66,7 +69,9 @@ section {
     background-color: rgb(143, 141, 141);
     height: 60em;
     margin: 0%;
+    padding-right: none;
 }
+
 aside {
     float: right;
     width: 25%;
