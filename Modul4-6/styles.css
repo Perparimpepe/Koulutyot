@@ -55,17 +55,18 @@ ol {
 }
 
 section {
-    float: left;
-    width: 65%;
+    float: right;
+    width: 85%;
     height: 25%;
     margin: 0%;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    background-color: blue;
 }
 .column {
     float: left;
     color: whitesmoke;
-    width: 12%;
+    width: 15%;
     background-color: rgb(143, 141, 141);
     height: 60em;
     margin: 0%;
