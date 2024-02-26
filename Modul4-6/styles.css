@@ -29,29 +29,26 @@ nav {
     padding: 10px 30px;
     font-size: large;
 }
-
-ul {
-    list-style: none;
-}
-
-li {
-    display: inline-flex;
-    padding: 1px 1em;
-}
-
-li a {
+.nav-links {
     color: whitesmoke;
     text-decoration: none;
     font-size: xx-large
 }
 
-li a:hover {
-    color: rgb(245, 7, 7);
+
+li a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: xx-large;
+}
+li {
+    display: inline-flex;
+    padding: 1px 1em;
 }
 
-ol {
-    list-style: none;
-    color: grey;
+
+li a:hover {
+    color: rgb(245, 7, 7);
 }
 
 section {
