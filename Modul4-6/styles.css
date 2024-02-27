@@ -77,9 +77,9 @@ article {
     color: whitesmoke;
     width: 15%;
     background-color: rgb(143, 141, 141);
-    height: 50em;
+    height: 40em;
     margin: 0%;
-    padding-right: none;
+    padding-bottom: 30px;
 }
 
 footer {
@@ -87,3 +87,8 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
