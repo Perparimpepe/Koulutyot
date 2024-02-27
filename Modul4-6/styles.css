@@ -21,16 +21,18 @@ p {
 header {
     background-color: grey;
     text-align: center;
-    padding: 20px;
+    font-size: x-large;
+    padding: none;
     color: bisque;
     text-shadow: 3px 3px 5px rgb(4, 4, 4);
+    height: 13vh;
 }
 nav {
     text-align: center;
     background-color: rgb(171, 174, 174);
     width: auto;
-    height: auto;
-    padding: 5px;
+    height: 8vh;
+    padding-bottom:none;
 }
 
 .nav-links {
@@ -84,7 +86,7 @@ article {
     background-color: rgb(143, 141, 141);
     height: 74vh;
     margin: 0%;
-    padding-bottom: 30px;
+    padding-bottom: none;
     text-align: left;
 }
 
@@ -94,6 +96,7 @@ footer {
     margin-top: auto;
     text-shadow: 3px 3px 3px black;
     color: rgb(161, 150, 135);
+    height: 5vh;
 }
 
 @media (max-width: 600px) {
