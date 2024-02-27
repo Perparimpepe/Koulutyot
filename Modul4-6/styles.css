@@ -66,16 +66,6 @@ section {
 
 }
 
-.column {
-    float: left;
-    color: whitesmoke;
-    width: 15%;
-    background-color: rgb(143, 141, 141);
-    height: 50em;
-    margin: 0%;
-    padding-right: none;
-}
-
 aside {
     float: right;
     width: 25%;
@@ -84,8 +74,12 @@ aside {
 
 article {
     float: left;
-    width: 65%;
-    height: 25%;
+    color: whitesmoke;
+    width: 15%;
+    background-color: rgb(143, 141, 141);
+    height: 50em;
+    margin: 0%;
+    padding-right: none;
 }
 
 footer {
