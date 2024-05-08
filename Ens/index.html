@@ -21,6 +21,12 @@ display: flex;
 justify-content: center;
 background-color: rgb(218, 209, 197);
 }
+.custom-dropdown-toggle {
+      color: black; 
+      margin-right: 20px; 
+      font-size: 20px; 
+      padding: 10px 20px;
+    }
     </style>
 
 
@@ -30,7 +36,7 @@ background-color: rgb(218, 209, 197);
  
   
   
-  <ul class="nav justify-content-center" style= "background-color: rgb(198, 188, 188); padding: 15px; font-size: larger; text-shadow: 1px 1px 5px; " >
+  <ul class="nav justify-content-center" style= "background-color: rgb(198, 188, 188); padding: 15px; font-size:large; text-shadow: 1px 1px 5px; " >
     <li class="nav-item">
       <a class="nav-link" style="color: black; margin-right: 20px;" href="index.html"><h3>Koti</h3></a>
     </li>
@@ -44,7 +50,7 @@ background-color: rgb(218, 209, 197);
       <a class="nav-link" style="color: black; margin-right: 20px;" href="fourth.html"><h3>Neljäs</h3></a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" style="color: black; margin-right: 20px;" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Valikko</a>
+      <a class="nav-link dropdown-toggle custom-dropdown-toggle" style="color: black; margin-right: 20px; font-size: 20px; padding: 10px 20px;" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Valikko</a>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Ota yhteyttä</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
