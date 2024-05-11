@@ -68,7 +68,7 @@ li a:hover {
 
 .column {
     float: left;
-    padding: none;
+    
 }
 
 .column.left{
@@ -98,8 +98,3 @@ footer {
     width: auto;
 }
 
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
