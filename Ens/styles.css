@@ -1,19 +1,9 @@
-body {
-    background-color: azure;
-    margin: 0%;
-    min-height: 100vh;
-    display: flex;
-}
 
 .jokin {
     width: 70%;
     margin-left: 15%;
 }
 
-p {
-    color: rgb(10, 10, 10);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 .outset {
 border-style: outset;
@@ -25,45 +15,6 @@ border-style: outset;
     padding: 5px;
 }
 
-header{
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 5px black;
-    width: auto;
-    height: 2cm;
-    font-size: x-large;
-}
-
-nav {
-    width: auto;
-    background-color: #989494;
-    height: 40px;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-    font-size: x-large;
-}
-
-ul{
-    list-style-type: none;
-}
-
-li {
-    display: inline-flex;
-    padding: 0px 50px;
-}
-
-
-li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-li a:hover {
-    text-shadow: 2px 2px 5px black;
-}
 
 
 .column {
@@ -90,11 +41,37 @@ li a:hover {
     clear: both;
 }
 
-footer {
-    padding: 20px;
-    text-align: center;
-    background: #f1f1f1;
-    margin-top: auto;
-    width: auto;
+.img {
+    height: 300px;
+    width: 500px;
+  }
+  .column {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(218, 209, 197);
+  }
+  .custom-dropdown-toggle {
+        color: black; 
+        margin-right: 20px; 
+        font-size: 20px; 
+        padding: 10px 20px;
+  }
+  .jokin {
+      width: 70%;
+      align-content: center;
+      margin-left: 15%;
+  }
+  .carousel-item{
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
 }
-
+.custom-nav {
+    background-image: url(Pepen\ autopaja.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.d-flex div {
+  margin: 10px;
+  }
