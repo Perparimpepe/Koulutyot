@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Workshop 1</title>
+		<!-- script tag is where Javascript goes to -->
+		<script>
+			for(var i = 0; i < 400; i++) {
+				console.log("This round is " + i);
+			}
+			var arr = [];
+			for (var i=0; i<15; i++) {
+			arr.push( Math.random() );
+			}
+			console.log(arr);
+			function areYouOldEnough(age) {
+			if (age < 18){
+			return false;
+			}else
+			return true;
+			}
+
+			console.log( areYouOldEnough(16));
+			document.write( areYouOldEnough(19));
+
+			alert(areYouOldEnough(5));
+			alert(areYouOldEnough(25));
+
+			var person = {
+				firstName:"John",
+				lastName:"Doe",
+				age:50,
+				eyeColor:"blue",
+				address:"mäkelänkatu",
+				phone:"123434"
+			};
+			console.log(person.age);
+		</script>
+
+	</head>
+
+	<body>
+		<h1>Welcome to example page</h1>
+		<p> Lorem ipsum dolorem...   </p>
+
+	</body>
+
+</html>
