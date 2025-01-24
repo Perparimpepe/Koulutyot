@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Check</h1>
+
+    <script>
+        // JavaScript to confirm if the user is a student
+        let isStudent = confirm("Are you a student?");
+        
+        if (isStudent) {
+            document.body.innerHTML += "<p>Welcome student!</p>";
+        } else {
+            document.body.innerHTML += "<p>Sorry, this page is for students only.</p>";
+        }
+    </script>
+
+</body>
+</html>
