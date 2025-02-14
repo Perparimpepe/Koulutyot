@@ -114,18 +114,29 @@
                 <p data-line="41">After choosing the box, the user is shown an   input field which asks detailed information regarding on the selected   contact method.</p>
           </li>
         </ul>
-        <form action="#" name="myForm" onsubmit="validateForm(event)">
+        <form action="#" name="myForm">
             <div class="no-border">
-                <label>Email address:<br>
-                    <input type="text" id="email" name="email"><span id="feedback"></span><br>
+                <label>First Name:<br>
+                    <input type="text" id="fname" name="fname">
                 </label>
             </div>
             <div class="no-border">
                 <label>
-                    Comment:<br>
+                    Last Name:<br>
                 </label>
-                <textarea name="comment" id="comment"></textarea><span id="freedback"></span><br>
+                <textarea name="lname" id="lname"></textarea>
             </div>
+            <input type="checkbox" name="box" id="box" onclick="showExtraFields()">Contact Me </br></br></br>
+            <fieldset id="extraFields">
+                <legend></legend>
+                <label for="contact">Contact method</label>
+                <select name="contact" id="contact" onclick="showInput()">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="sms">SMS</option>
+                </select><br>
+                <input type="text" name="contactInfo" style="display: none;">
+            </fieldset>
             <br>
             <input type="submit" value="Send">
         </form>
@@ -205,6 +216,40 @@
 
                 document.getElementById("total").value = total.toFixed(2);
             }
+            
+                var x = document.getElementById("extraFields");
+                x.style.display = "none";
+                
+                function showExtraFields(){
+                
+                var extraFieldset =document.getElementById("extraFields");
+                var checkBox = document.getElementById("box");
+                
+                if (checkBox.checked){
+                extraFieldset.style.display = "block";
+                } 
+                else {
+                extraFieldset.style.display = "none";
+                }
+            }
+            function showInput() {
+                var selectBox = document.getElementById("contact");
+                var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+                var inputField = document.getElementsByName("contactInfo")[0];
+                if (selectedValue == "email") {
+                    inputField.style.display = "block";
+                    inputField.placeholder = "Enter your email address";
+                } else if (selectedValue == "phone") {
+                    inputField.style.display = "block";
+                    inputField.placeholder = "Enter your phone number";
+                } else if (selectedValue == "sms") {
+                    inputField.style.display = "block";
+                    inputField.placeholder = "Enter your SMS number";
+                } else {
+                    inputField.style.display = "none";
+                }
+            }
+
         </script>
     </body>
 </html>
