@@ -16,17 +16,17 @@
         <p data-line="6">a) Write JavaScript code which   checks the input fields when the form submit-button is clicked. Display the   entered values with alert -dialogs. Use onsubmit-event on the form tag. Make sure that your code cancels the submission of the form if needed. Hint: See the PowerPoint -slides.</p>
         <p data-line="8">b) Enhance the code and write   if-statements to check the following: the length of email address should be atleast 6 and   less than 15. It should also have a  @ - character. Check also that the comment field is not be empty and the content should be trimmed down to 50 characters. Utilize JavaScript <a href="http://www.w3schools.com/js/js_string_methods.asp" target="_blank">String-methods</a>.</p>
         <p data-line="12">c) Should an error occur,   highlight the erroneous field and provide some feedback to the user.   Preferably by displaying some text message on the page, next to the   input field. See the lecture slides for demo.</p>
-        <form onsubmit="">
+        <form action="#" name="myForm" onsubmit="validateForm(event)">
             <div class="no-border">
                 <label>Email address:<br>
-                    <input type="text" name="email">
+                    <input type="text" id="email" name="email"><span id="feedback"></span><br>
                 </label>
             </div>
             <div class="no-border">
                 <label>
                     Comment:<br>
                 </label>
-                <textarea name="comment"></textarea>
+                <textarea name="comment" id="comment"></textarea><span id="freedback"></span><br>
             </div>
             <br>
             <input type="submit" value="Send">
@@ -108,6 +108,35 @@
                 <p data-line="41">After choosing the box, the user is shown an   input field which asks detailed information regarding on the selected   contact method.</p>
           </li>
         </ul>
-        <script src="js/shopping.js"></script>
+        <script>
+            function validateForm(event){
+                event.preventDefault();
+                var email = document.forms["myForm"]["email"].value;
+                var comment = document.forms["myForm"]["comment"].value;
+                var emailField = document.forms["myForm"]["email"];
+                var commentField = document.forms["myForm"]["comment"];
+
+                if (email == "" || email == null || email.length < 6 || email.length > 15 || !email.includes("@")) {  
+                    emailField.style.borderColor = "red";
+                    document.getElementById("feedback").innerHTML = "<b>*Email must be filled out</b>";
+                    return false;
+                } else {
+                    emailField.style.borderColor = "green";
+                    document.getElementById("feedback").innerHTML = "";
+                }
+                
+                if (comment == "" || comment == null || comment.length > 50) {
+                    commentField.style.borderColor = "red";
+                    document.getElementById("freedback").innerHTML = "<b>*Comment must be filled out and be less than 50 characters long.</b>";
+                    return false;
+                } else {
+                    commentField.style.borderColor = "green";
+                    document.getElementById("freedback").innerHTML = "";
+                }
+                alert("Form submitted" + "\nEmail: " + email + "\nComment: " + comment);
+                document.forms["myForm"].reset();
+                return true;
+            }
+        </script>
     </body>
 </html>
