@@ -14,7 +14,7 @@
 		<h2>Exercise 1: JSON Basics</h2>
 		<p>JSON means JavaScript Object Notations, and it means that we will represent data in a format which JavaScript understands as such. No conversions are necessary to use it.</p>
 		<p>
-		  <button>Display the first and lastname only</button>
+		  <button onclick="displayJSON()">Display the first and lastname only</button>
 		  <button>Display all data</button>
 		</p>
 		<p>Let's try the following. You can create a new JSON dataset in your JavaScript as described below. Then create functions, which will run when the buttons are clicked.</p>
@@ -34,8 +34,8 @@
 		<h2>Exercise 2: Parsing JSON from web</h2>
 		<p>Below you see two buttons. Edit the source code and add onClick-events to these buttons. Add functionality to these as described below.</p>
 		<p>
-		  <button>Load raw data</button>
-		  <button>Load and parse the data</button>
+		  <button onclick="loadRawData()">Load raw data</button>
+		  <button onclick="loadAndParseData()">Load and parse the data</button>
 		</p>
 
 		<ul>
@@ -54,21 +54,98 @@
 		<p>Sample call to the REST API could be like this: <a href="http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=ff64c247a136f706923d1ee0d55d71e2">http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=ff64c247a136f706923d1ee0d55d71e2
 		</a>. Click to see the response.</p>
 		<ul>
-			<li>First develop the app to display raw weather information (Temperature, Clouds, Humidity) on one spesific city, when the button is clicked. <button>Get data</button> </li>
+			<li>First develop the app to display raw weather information (Temperature, Clouds, Humidity) on one spesific city, when the button is clicked. <button onclick="weather()">Get data</button> </li>
 			<li>When you achieve this, then parse the data and output it to div</li>
 			<li>When you have achieved this, implement an onchange-event on the pulldown menu, which will allow the user to select which city's data will be shown from a list of cities</li>
 			<li>When you have completed this, add functionality to an input field, in which the user can write search queries which are sent to the OpenWeatherMap API and the system will run a search query which is retuned to your app.</li>
 		</ul>
 		<p>Select a city from the list:</p>
-		<select name="mySelect" id="city" onchange="">
+		<select name="mySelect" id="city" onchange="weather()">
 			<option value="Helsinki">Helsinki</option>
 			<option value="Stockholm">Stockholm</option>
 			<option value="Rome">Rome</option>
 			<option value="New York">New York</option>
 		</select>
-		<p>Or type in a search query: <input id="citysearch" /><button id="search">Search</button></p>
+		<p>Or type in a search query: <input id="citysearch" /><button id="search" onclick="searchWeather()">Search</button></p>
 		<div id="weatherdata">Weatherdata goes here.</div>
 
 	</body>
+	<script>
+		function displayJSON() {
+			var text = '{ "employees" : [' +
+				'{ "firstName":"John" , "lastName":"Doe" },' +
+				'{ "firstName":"Anna" , "lastName":"Smith" },' +
+				'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+			var obj = JSON.parse(text);
+			var out = "<table>";
+			for (var i = 0; i < obj.employees.length; i++) {
+				out += "<tr><td>" + obj.employees[i].firstName + "</td><td>" + obj.employees[i].lastName + "</td></tr>";
+			}
+			out += "</table>";
+			document.getElementById("jsondata").innerHTML = out;
+		}
+
+		function loadRawData() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("rawdata").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "http://www.omdbapi.com/?s=star+wars&apikey=cbbc6750", true);
+			xhttp.send();
+		}
+
+		function loadAndParseData() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var obj = JSON.parse(this.responseText);
+					var out = "<table>";
+					for (var i = 0; i < obj.Search.length; i++) {
+						out += "<tr><td>" + obj.Search[i].Title + "</td><td>" + obj.Search[i].Year + "</td><td><img src='" + obj.Search[i].Poster + "'></td></tr>";
+					}
+					out += "</table>";
+					document.getElementById("rawdata").innerHTML = out;
+				}
+			};
+			xhttp.open("GET", "http://www.omdbapi.com/?s=star+wars&apikey=cbbc6750", true);
+			xhttp.send();
+		}
+
+		function weather() {
+			var city = document.getElementById("city").value;
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						var obj = JSON.parse(this.responseText);
+						var out = "<h2>Weather in " + city + "</h2>";
+						out += "<p>Temperature: " + obj.main.temp + "°C</p>";
+						out += "<p>Humidity: " + obj.main.humidity + "%</p>";
+						out += "<p>Clouds: " + obj.clouds.all + "%</p>";
+						document.getElementById("weatherdata").innerHTML = out;
+					}
+				};
+				xhttp.open( "GET","http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&mode=JSON&APPID=87a49b58957c149d127ac10a635ffb34", true);
+				xhttp.send();
+		}
+
+		function searchWeather() {
+			var city = document.getElementById("citysearch").value; // Hae käyttäjän syöttämä kaupunki
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var obj = JSON.parse(this.responseText);
+					var out = "<h2>Weather in " + city + "</h2>";
+					out += "<p>Temperature: " + obj.main.temp + "°C</p>";
+					out += "<p>Humidity: " + obj.main.humidity + "%</p>";
+					out += "<p>Clouds: " + obj.clouds.all + "%</p>";
+					document.getElementById("weatherdata").innerHTML = out;
+				}
+			};
+			xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&mode=JSON&APPID=87a49b58957c149d127ac10a635ffb34", true);
+			xhttp.send();
+		}
+	</script>
 </html>
 
